@@ -19,7 +19,4 @@ document.getElementById('pyramid-it').addEventListener('click', () => {
   // display the pyramid
   display('pyramided', pyramid);
 });
-// let pyramid = '';
-//   for (let i = 0; i <= bricks.length; i++) {
-//     pyramid += bricks.substr(0, i) + `\n`;
-//   }
+
