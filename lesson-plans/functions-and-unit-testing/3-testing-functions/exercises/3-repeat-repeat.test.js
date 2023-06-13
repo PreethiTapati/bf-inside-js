@@ -8,7 +8,7 @@
  * @returns {string} The string with repeated characters, repeated.
  */
 
-const repeatRepeat = (text, repeats) => {
+function repeatRepeat (text, repeats){
   let repeatedString = '';
 
   for (let i = 0; i < text.length; i++) {
@@ -16,7 +16,7 @@ const repeatRepeat = (text, repeats) => {
   }
   repeatedString = repeatedString.repeat(repeats);
   return repeatedString;
-};
+}
 
 describe('repeatRepeat: repeats each character and the whole string', () => {
   it('repeat-repeats 0 times', () => {
