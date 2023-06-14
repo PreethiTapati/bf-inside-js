@@ -14,3 +14,4 @@ const a = 1;
 a++; // TypeError: Assignment to constant variable.
 
 ++a;
+// using let we can do incrementing operators
