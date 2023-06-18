@@ -1,11 +1,14 @@
-// #todo
-
 'use strict';
 
 let userInput = '';
-while (userInput === '') {
-  /* -- BEGIN: validate input -- */
-  /* -- END: validate input -- */
+while (true) {
+  userInput = prompt('Enter anything:');
+
+  if (userInput === null || userInput.trim() === '') {
+    continue;
+  }
+
+  break;
 }
 
 const finalMessage =

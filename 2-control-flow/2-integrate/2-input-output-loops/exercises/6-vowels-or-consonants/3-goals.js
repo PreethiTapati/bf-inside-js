@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* for character of String
@@ -13,8 +11,17 @@ let userInput = '';
 while (true) {
   userInput = prompt('enter a word to filter:');
 
-  /* -- BEGIN: validate input -- */
-
+ /* -- BEGIN: validate input -- */
+  if (userInput === '' || userInput === null) {
+    alert('Nope, enter something');
+    continue;
+  }
+  const whiteSpaceRegex = /\s/g;
+  if (whiteSpaceRegex.test(userInput)) {
+    alert("Words can't have whitespace");
+    continue;
+  }
+  break;
   /* -- END: validate input -- */
 }
 
@@ -25,14 +32,18 @@ const removeVowels = confirm(`what would you like to remove from "${userInput}"?
 
 let toRemove = '';
 if (removeVowels) {
-  toRemove = 'AEIOU';
+  toRemove = 'AEIOUaeiou';
 } else {
-  toRemove = 'BCDFGHJKLMNPQRSTVWXYZ';
+  toRemove = 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz';
 }
 
 let filteredInput = '';
 /* -- BEGIN: filter input -- */
-
+for (const character of userInput) {
+  if (!toRemove.includes(character)) {
+    filteredInput += character;
+  }
+}
 /* -- END: filter input -- */
 
 const finalMessage = `"${userInput}" -> "${filteredInput}"`;

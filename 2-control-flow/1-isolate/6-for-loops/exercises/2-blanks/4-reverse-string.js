@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -17,11 +15,11 @@ console.log('originalString:', originalString);
 
 let reversedString = '';
 
-for (_; _; _) {
-  const nextLetter = _;
-  reversedString = _;
+for (let i = originalString.length - 1; i >= 0; i--) {
+  const nextLetter = originalString[i];
+  reversedString += nextLetter;
 
-  console.log(_); // your stepper variable
+  console.log(i); // your stepper variable
   console.log('reversedString:', reversedString);
 }
 

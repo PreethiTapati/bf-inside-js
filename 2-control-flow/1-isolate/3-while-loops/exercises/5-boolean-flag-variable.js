@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -27,11 +25,11 @@ let paddedString = 'hi';
 
 // boolean flag variable
 let isLongEnough = false;
-while (_) {
-  paddedString = _;
+while (paddedString.length < longEnough) {
+  paddedString += padding;
   console.log(paddedString);
-  if (_) {
-    _;
+  if (paddedString.length >= longEnough) {
+    isLongEnough = true
   }
 }
 

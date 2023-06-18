@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* look out fo:
@@ -21,17 +19,18 @@ const instructions = `Two-Player Remembery
 alert(instructions);
 
 alert('Player 2: go hide');
+// we need to use different variable names for each prompt
 
-const phrase = prompt('Player 1, enter your first phrase:');
-const phrase = prompt('Player 1, enter your second phrase:');
-const phrase = prompt('Player 1, enter your third phrase:');
+const phrase1 = prompt('Player 1, enter your first phrase:');
+const phrase2 = prompt('Player 1, enter your second phrase:');
+const phrase3 = prompt('Player 1, enter your third phrase:');
 
 alert('Player 2, get back here');
 
 const phrasesToRemember = `Player 2, remember these:
-  1. "${phrase}"
-  2. "${phrase}"
-  3. "${phrase}"
+  1. "${phrase1}"
+  2. "${phrase2}"
+  3. "${phrase3}"
 `;
 alert(phrasesToRemember);
 

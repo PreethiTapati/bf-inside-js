@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -8,8 +6,8 @@ console.log('-- begin --');
 //  what do all solutions to the same path have in common?
 // or maybe there are unreachable paths!
 
-const value1 = _;
-const value2 = _;
+const value1 = 'false';
+const value2 = 'true';
 let path = '';
 
 if (value1 && !value2) {
@@ -17,7 +15,7 @@ if (value1 && !value2) {
 } else if (!value1 || !value2) {
   path = 'else if 1';
 } else if (value2 && !value1) {
-  path = 'else if 2';
+  path = 'else if 2'; // unreachable path
 } else {
   path = 'else';
 }

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -25,8 +23,9 @@ const holiday = 'winter solstice';
 const message = '_' + holiday;
 
 let tweet = '';
-for (let daysToHoliday = 14; _; _) {
-  tweet = daysToHoliday + message;
+
+for (let daysToHoliday = 14; daysToHoliday > 0; daysToHoliday--) {
+  tweet = daysToHoliday + ' days remaining until ' + holiday;
   console.log(tweet);
 }
 

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -15,8 +13,11 @@ console.log('originalString:', originalString);
 
 let reverseUpperCase = '';
 
-for (_; _; _) {
-  // a blank canvas :)
+
+for (let i = originalString.length - 1; i >= 0; i--) {
+  const nextLetter = originalString[i];
+  const letterUpperCase = nextLetter.toUpperCase();
+  reverseUpperCase += letterUpperCase;
 }
 
 console.assert(

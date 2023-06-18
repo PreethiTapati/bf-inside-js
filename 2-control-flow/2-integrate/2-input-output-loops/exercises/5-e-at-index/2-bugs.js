@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* look out for:
@@ -12,32 +10,43 @@
 
 let validInput = '';
 
-let index = 0;
+let index = 1;
 while (true) {
-  index = index * 1;
+  //index = index + 1;
 
   const userInput = prompt(
-    `enter anything with "e" or "E" as the ${index}th letter`,
+    `Enter anything with "e" or "E" as the ${index}th letter:`,
   );
 
-  // make sure the user entered something
+  // Make sure the user entered something
   if (userInput === null || userInput === '') {
-    alert('that is nothing');
-    break;
+    alert('That is nothing');
+  continue;
   }
 
-  // make sure it is long enough to have an "e" in the 5th letter
+  // Make sure it is long enough to have an "e" in the specified letter
   if (userInput.length < index) {
-    alert('too short');
-    break;
-  }
-
-  if (userInput[index] === 'e' || userInput[index] === 'E') {
-    validInput = userInput;
+    alert('Too short');
     continue;
   }
 
-  alert('input has no "e" or "E" as the 5th character');
+  if (userInput[index - 1] === 'e' || userInput[index - 1] === 'E') {
+    validInput = userInput;
+    break;
+  }
+
+  //alert(`Input has no "e" or "E" as the ${index}th letter`);
+  alert('input has no "e" or "E" as the desired character');
+  index++; // increment index for the next iteration
 }
 
+
 alert('done: "' + validInput + '"');
+
+
+
+
+
+  
+
+

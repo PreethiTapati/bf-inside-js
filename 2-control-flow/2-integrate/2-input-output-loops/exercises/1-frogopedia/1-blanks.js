@@ -1,22 +1,21 @@
-// #todo
-
 'use strict';
 
 let userInput = '';
-let inputIsAboutFrogs = _;
+let inputIsAboutFrogs = false;
 while (!inputIsAboutFrogs) {
   userInput = prompt('tell me something about frogs');
   console.log('userInput:', typeof userInput, userInput);
 
   // check if the user entered nothing, or clicked cancel
-  if (_) {
-    alert('that is not something');
+ if (userInput === null || userInput === '') {
+    alert('That is not something');
     continue;
   }
 
+
   // search the user input for "frog", upper or lower case
-  if (_) {
-    inputIsAboutFrogs = _;
+  if (userInput.toLowerCase().includes('frog')) {
+    inputIsAboutFrogs = true;
     continue;
   }
 

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* look out for:
