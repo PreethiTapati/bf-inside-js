@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /* look out for:
@@ -8,21 +6,22 @@
 
 */
 
-let userString = '';
+let stringToReapitify = '';
 let repetitions = NaN;
 
-let didConfirm = false;
-while (didConfirm) {
+
+while (true) {
   /* gather a string from the user */
-  userString = prompt('enter a phrase, each character will be repeated:');
-  console.log('userString:', typeof userString, userString);
+  stringToReapitify = prompt('enter a phrase, each character will be repeated:');
+  console.log('stringToReapitify:', typeof stringToReapitify, stringToReapitify);
 
   /* make sure the user input something */
-  if (userString === '' || userString === null) {
+  if (stringToReapitify === '' || stringToReapitify === null) {
     alert('nope, enter something');
   } else {
     /* ask the user for a number */
-    while (true) {
+     let inputIsNumber = false;
+    while (!inputIsNumber) {
       const repetitionsInput = prompt(
         'how many times do you want to repeat each character?',
       );
@@ -46,21 +45,25 @@ while (didConfirm) {
       if (Number.isNaN(repetitions)) {
         alert('"' + repetitionsInput + '" is not a number');
       } else {
-        continue;
+        inputIsNumber = true;
       }
     }
-
+  }
     /* ask the user to confirm their input */
     const confirmMessage =
-      'is this correct?\n\n' + '- "' + userString + '"\n' + '- ' + repetitions;
-    didConfirm = confirm(confirmMessage);
+      'is this correct?\n\n' + '- "' + stringToReapitify + '"\n' + '- ' + repetitions;
+    const confirmation = confirm(confirmMessage);
+    if (confirmation) {
+      break;
+    }
   }
-}
+
 
 let withRepeatedCharacters = '';
 
 /* iterate through each character in the user input */
-for (const character in userString) {
+for (let i = 0; i < stringToReapitify.length; i++) {
+  const character = stringToReapitify[i]
   /* append each character multiple times to the new string */
   for (let i = 0; i < repetitions; i++) {
     withRepeatedCharacters += character;
@@ -73,5 +76,6 @@ console.log(
   withRepeatedCharacters,
 );
 
-const finalMessage = `"${userString}" -> "${withRepeatedCharacters}"`;
+const finalMessage = `"${stringToReapitify}" -> "${withRepeatedCharacters}"`;
 alert(finalMessage);
+console.log(finalMessage)

@@ -1,5 +1,5 @@
-// #todo
+//debugger;
 
-debugger;
-
-const sayHi = __;
+export const sayHi = (name) => {
+  return `Hello, ${name}!`;
+};;

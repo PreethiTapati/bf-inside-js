@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /**
@@ -10,19 +8,37 @@
  * @param {number} [toSkip=0] - How often to skip a character.
  * @returns {string} The text with missing characters.
  */
+// const skipCharacters = (text = '', toSkip = 0) => {
+//   if (toSkip < 1) {
+//     return text;
+//   }
+
+//   let skipified = '';
+//   for (let i = 0; i < text.length; i++) {
+//     if (i % toSkip !== 0) {
+//       skipified += text[i];
+//     }
+//   }
+//   return skipified;
+// };
+
+
 const skipCharacters = (text = '', toSkip = 0) => {
-  if (toSkip < _) {
-    return _;
+  if (toSkip < 1) {
+    return text;
   }
 
   let skipified = '';
-  for (_; _; _) {
-    if (i % toSkip !== 0) {
-      __;
+  let index = 0;
+  for (const character of text) {
+    if (index++ % toSkip !== 0) {
+      skipified += character;
     }
   }
   return skipified;
 };
+
+
 
 describe("skipCharacters: removes every x'th character from a string", () => {
   describe('how it skips characters by index', () => {

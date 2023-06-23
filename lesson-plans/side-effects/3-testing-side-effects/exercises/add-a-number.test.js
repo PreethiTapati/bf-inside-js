@@ -14,7 +14,15 @@
  * @example
  * addANumber([-2, -1, 0, 1], 1); // [-1, 0, 1, 2]
  */
-const addANumber = () => {};
+
+
+const addANumber = (numbers = [], addMe = 0) => {
+  const newArray = numbers.map((number) => number + addMe);
+  return newArray;
+};
+
+
+
 
 describe('addANumber: adds a given number to each number in an array', () => {
   describe('the function adds to each entry:', () => {

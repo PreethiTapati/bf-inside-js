@@ -1,26 +1,95 @@
-// #todo
-
 import { reverseAString } from './reverse-a-string.js';
 
-describe('it should reverseAString strings', () => {
+describe('reverseAString', () => {
   describe('when no argument is passed', () => {
-    it('default parameter is an empty string', () => {
-      expect(reverseAString()).toEqual('');
+    it('should return an empty string', () => {
+      const result = reverseAString();
+      expect(result).toEqual('');
     });
   });
+
   describe('when argument is a string', () => {
-    it('the empty string should return an empty string', () => {
-      expect(reverseAString('')).toEqual(_);
+    it('should return an empty string when input is an empty string', () => {
+      const input = '';
+      const expected = '';
+
+      const result = reverseAString(input);
+
+      expect(result).toEqual(expected);
     });
-    it('"toads" should return "sdaot"', () => {
-      expect(reverseAString(_)).toEqual('sdaot');
+
+    it('should reverse "toads" to "sdaot"', () => {
+      const input = 'toads';
+      const expected = 'sdaot';
+
+      const result = reverseAString(input);
+
+      expect(result).toEqual(expected);
     });
-    // write at least 5 more tests
+
+    it('should reverse "hello" to "olleh"', () => {
+      const input = 'hello';
+      const expected = 'olleh';
+
+      const result = reverseAString(input);
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should reverse "12345" to "54321"', () => {
+      const input = '12345';
+      const expected = '54321';
+
+      const result = reverseAString(input);
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should reverse "racecar" to "racecar"', () => {
+      const input = 'racecar';
+      const expected = 'racecar';
+
+      const result = reverseAString(input);
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should reverse "howdy" to "ydwoh"', () => {
+      const input = 'howdy';
+      const expected = 'ydwoh';
+
+      const result = reverseAString(input);
+
+      expect(result).toEqual(expected);
+    });
   });
+
   describe('when argument is not a string', () => {
-    it('true should return "text is not a string"', () => {
-      expect(reverseAString(true)).toEqual(_);
+    it('should return "text is not a string" when input is true', () => {
+      const input = true;
+      const expected = 'text is not a string';
+
+      const result = reverseAString(input);
+
+      expect(result).toEqual(expected);
     });
-    // write at least 3 more tests
+
+    it('should return "text is not a string" when input is null', () => {
+      const input = null;
+      const expected = 'text is not a string';
+
+      const result = reverseAString(input);
+
+      expect(result).toEqual(expected);
+    });
+
+    it('should return "text is not a string" when input is 123', () => {
+      const input = 123;
+      const expected = 'text is not a string';
+
+      const result = reverseAString(input);
+
+      expect(result).toEqual(expected);
+    });
   });
 });
