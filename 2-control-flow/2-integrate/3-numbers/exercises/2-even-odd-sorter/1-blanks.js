@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 let userNumber = NaN;
@@ -9,17 +7,19 @@ while (userNumberIsNaN) {
   console.log('userInput:', typeof userInput, userInput);
 
   // make sure the user entered something
-  ___;
-
+ if (!userInput) {
+    alert('Please enter something!');
+    continue;
+  }
   userNumber = Number(userInput);
   console.log('userNumber:', typeof userNumber, userNumber);
 
   // check if the input was a valid number
-  if (_) {
+  if (isNaN(userNumber)) {
     alert('"' + userInput + '" is not a number');
   } else {
     // if the input was a number, toggle the flag
-    _ = false;
+    userNumberIsNaN = false;
   }
 }
 

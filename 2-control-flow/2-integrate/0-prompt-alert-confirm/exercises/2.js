@@ -1,10 +1,10 @@
-// #todo
+
 
 'use strict';
 
 // fill in the blank to pass the assertion
 
-const inputValue = _('asdf');
+const inputValue = Object('asdf');
 
 console.log(typeof inputValue, inputValue);
 

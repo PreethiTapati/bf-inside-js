@@ -1,14 +1,11 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 /**
- * _
- *
- * @_ {_} [_=_] - _
- * @_ {_}  _
+ * Checks whether a given string is a palindrome.
+ * @param {string} toCheck - The string to be checked for palindrome.
+ * @returns {boolean} - True if the string is a palindrome, false otherwise.
  */
 const isPalindrome = (toCheck = '') => {
   let reversed = '';
