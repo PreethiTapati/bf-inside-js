@@ -5,13 +5,18 @@ const deepCompare = (actual, expect) => actual === expect || Object.is(actual, e
 
 /* swap items between two arrays */
 
+
 // -- declare variables (this is correct) --
 const arr1 = [1, 2, 'b', 4];
 const arr2 = [3, 'a', 'c'];
 let temp;
 
 // -- swap values (write this code) --
+temp = arr1[2]; // b
+arr1[2] = arr2[0]; // 3
 
+arr2[0] = arr2[1]; //a
+arr2[1] = temp; // b
 // -- assert values (this is correct) --
 console.assert(deepCompare(arr1, [1, 2, 3, 4]), 'array 1');
 console.assert(deepCompare(arr2, ['a', 'b', 'c']), 'array 2');

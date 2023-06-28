@@ -1,8 +1,6 @@
-// #todo
-
 /* ===== import functions ===== */
 
-import { search } from '../utils/search.js';
+import { search  } from '../utils/search.js';
 
 /* ===== main program (use functions) ===== */
 
