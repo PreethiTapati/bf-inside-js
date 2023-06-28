@@ -1,4 +1,4 @@
-// #todo
+//import { reverse } from './utils/reverse.js';
 
 import { reverse } from './utils/reverse.js';
 
@@ -40,13 +40,18 @@ if (reverseWords) {
   reversed = newWords.join(' ');
 } else {
   // BEGIN: refactor this to call `reverse`
-  let reversedText = '';
-  for (let i = 0; i < original.length; i++) {
-    reversedText = original[i] + reversedText;
-  }
+  // let reversedText = '';
+  // for (let i = 0; i < original.length; i++) {
+  //   reversedText = original[i] + reversedText;}
+  
+  const reversedText = reverse(original);
+   
   // END: refactor
   reversed = reversedText; // use the return value
 }
 
 alert(`before: ${original}
 after: ${reversed}`);
+
+
+
