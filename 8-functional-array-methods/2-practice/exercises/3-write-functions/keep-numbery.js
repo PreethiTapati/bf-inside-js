@@ -4,7 +4,8 @@
  * @returns {Array} - a new array of number values
  */
 export const keepNumbery = (arr = []) => {
-  
-return arr.map((item) => Number(item)).filter((item) => !Number.isNaN(item))
-
+  return arr
+    .map((item) => Number(item))
+    .filter((value) => !Number.isNaN(value));
 };
+//return arr.map((element) => Number(element)).filter((element) => !isNaN(element))};

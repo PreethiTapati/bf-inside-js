@@ -8,4 +8,14 @@
  *
  * @returns {Array} a copy of the array with one entry modified
  */
-export const replaceEntry = () => {};
+//export const replaceEntry = () => {
+
+//};
+export const replaceEntry = (arr = [], index = 0, newEntry) => {
+   const copiedArray = [...arr];
+  if (index >=0 && index < arr.length) 
+  copiedArray[index] = newEntry;{
+  }
+    return copiedArray;
+  }
+
