@@ -8,7 +8,7 @@ const obj2 = { a: 'x', b: 'y', c: 1 };
 let temp;
 
 // -- swap values (write this code) --
-//[obj1.a, obj2.c] = [obj2.c, obj1.a];
+
 temp = obj1.a;
 obj1.a = obj2.c;
 obj2.c = temp;
