@@ -10,7 +10,6 @@ const removeThese = () => {
   const toRemove= readString('to-remove'); 
 
   // remove all the user's characters from the input
-  const noThis = 'toRemove'
   //  use `removeCharacters` to write this step of the program
   const noThis = removeCharacters(userText,toRemove);
 
